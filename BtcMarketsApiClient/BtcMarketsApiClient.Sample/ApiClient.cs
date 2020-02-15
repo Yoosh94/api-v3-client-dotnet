@@ -34,8 +34,7 @@ namespace BtcMarketsApiClient.Sample
                 var response = await client.GetAsync(fullPath);
                 if (!response.IsSuccessStatusCode)
                     Console.WriteLine("Error: " + response.StatusCode.ToString());
-
-                var content = await response.Content.ReadAsStringAsync();
+                
                 return new ResponseModel
                 {
                     Headers = response.Headers,
